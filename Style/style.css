@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,100;1,400&display=swap');
+
+body{
+    margin: 0;
+    padding: 0 1%;/* permet de faire que les element de touche pas les etremiter de l'écran */
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #6C86C5;
+
+
+}
+
+nav {
+    display: flex; /* ici on declare que l'on va utiliser la balise flex */
+    flex-wrap: wrap;
+    justify-content: space-between; /* ici on declare que l'on va mettre de l'espace entre les contenue */
+    align-items: center; /* pour placer les differetns contenue au meme niveau */ 
+    background-color: #6C86C5;
+    position: sticky; /* permet de faire en sorte que la bar de navigation reste fixe */
+    top: 0; /* il est important de mettre car sinon le fixation de fonctionne pas */
+}
+
+nav .profile {
+    display: flex;
+    align-items: center;
+}
+
+nav .profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+nav .profile h1 {
+    margin-left: 10px;
+    font-size: 25px; /* pour modifier la taille du text */
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none; /* pout enlever toutes les décoration du texte */
+    outline: none;
+}
+nav ul a{
+    text-decoration: none; /* pour enlever la décoration sur les lien hypertext */
+    
+}
+
+nav ul li{
+    margin-left: 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #6C86C5;/* on met sa pour avoir du relierr sur le bord du nav */
+}
+nav ul li:hover {
+    border-bottom-color: black ;
+}
+/*----------------------------------- la partie acceuill  ----------------------------------- */
+.page-content{
+    margin: 4%;
+}
+
+.page-content header {
+    margin-top: 5%;
+    max-width: 80%; /* la place que va prendre le contenue */
+
+}
+.page-content header h1 {
+    margin: 0;
+    text-transform: uppercase;/* pour mettre le tritre en gros */
+    font-family:'Oswald', sans-serif;
+    font-size: 6vw;/* vw veut dire view with en gros c'est comme les pourcentages */
+}
+.page-content header p {
+    line-height: 30px; /* la on met de l'espace entre les ligne chaque ligne */
+    color: #fff;
+
+}
+.page-content header button {
+    background-color: inherit;/* pour mettre la meme couleur que sur le site */
+    border: none;/* on retire les bordures du bouton */
+    outline: none; /* on retire la bordure que l'on a mis sur le bouton */
+    padding: 0;/* pour aligner le bouton aux texte */
+    font-size: 30px;
+    font-weight: bold;/* pour le mettre en gras*/
+    padding-bottom: 5px; /* mettre de l'esapce entre le bord et le texte */
+    border-bottom: 2px solid red;
+    cursor: pointer;
+}
+
+.page-content header button:hover {
+    color: red;
+    border-bottom-color: black;
+}
+
+/*--------------------------------image central -------------------------------------*/
+.page-content .presentation-image {
+    margin-top: 5%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+.page-content .presentation-image img{
+    border-radius: 20px;
+    max-width: 100%;/*largeur a ne pas depasser */
+    height: auto;/* hauteur */
+    
+
+}
+
+/*--------------------------------les porjets----------------------------------------*/
+.page-content .projects-section {
+    margin-top: 6%;
+}
+.page-content .projects-section h1 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase; /* pour mettre le texte en majuscule */
+    font-size: 3vw;
+    display: flex;/* ici j'appel les fonction flex ou d'aligner les objet */
+    justify-content: center;/* je met le titre au centre */
+}
+.page-content .projects-section .projets {
+    display: flex;/* permet d'aligner les object */
+    flex-wrap: wrap; /* permet de les aligner */
+    border-color: red;
+
+}
+.page-content .projects-section .projets .projet{
+    margin-right: auto; /* important pour definir le contenu */
+    max-width: 195px;
+    color: red;
+    margin-left: 5%;
+
+    /*display: flex;
+    justify-content: center; */
+
+}
+.page-content .projects-section .projets .projet img{
+    width: 150px;
+    height: 140px;
+    border-radius: 5%;
+    transition: 0.5s;
+
+}
+.page-content .projects-section .projets .projet img:hover{
+    
+   filter: brightness(70%);
+
+}
+.page-content .projects-section .projets .projet h4{
+    margin: 0;/* on fait decendre le titre */
+    padding-left: 52px;
+}
+.page-content .projects-section .projets .projet .date{
+    padding-left: 27px;
+}
+.page-content .projects-section .projets .projet .description {
+    font-size: 10px;
+}
+
+
+/*-------------------------------- le footer-----------------------------------------*/
+footer {
+    margin-top: 5%;
+    display: flex;
+    flex-wrap: wrap;/* poour faire passser les elements dans la ligne en dessous si sa deborde  */
+    justify-content: space-around;
+    background-color: black;
+    color: #fff;
+    padding: 10px;
+}
+
+footer .colonne p {
+    font-size: 12px;
+    color: red;
+    cursor: pointer;
+}
+footer .colonne p:hover {
+    color: blue;
+
+}
+
+
+@media screen and (max-width: 700px) {
+    nav{
+        justify-content: center;
+
+    }
+    nav ul{ /* pour masquer les onglet qd l'écran est petit */
+        display: none;
+    }
+    .page-content header {
+        margin-top: 10px;
+        max-width: 100%; /* la taille maximum */
+    }
+    .page-content header button {
+        display: block; /* Change the button from inline to block element */
+        margin: 0 auto;
+        outline: none;
+        list-style-type: none;
+        border: none;
+        font-size: 20px;
+    }
+
+    .page-content .projects-section {
+        margin-top: 15%;
+    }
+
+    .page-content .projects-section h1 {
+        font-size: 1.5em; /* on multiplie la taille de base par 1,5 */
+    }
+    .page-content .projects-section .projets .projet{
+        margin-bottom: 20px;/* on met de l'espace en dessous */
+        /*max-width: 100%;*/
+    }
+
+    footer {
+        justify-content: flex-start;
+        
+    }
+
+
+    
+}
