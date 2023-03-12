@@ -13,7 +13,7 @@
 <body>
 <section class="page-content">
     <header>
-        <h1>Bienvenue sur mon Portefolio</h1>
+        <h1>Bienvenue sur mon Portfolio</h1>
         <p>Développeur web en alternance</p>
         <a href="#"><button>Me connaitre</button></a>
     </header>
